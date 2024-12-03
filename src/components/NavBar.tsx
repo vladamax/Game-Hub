@@ -1,14 +1,14 @@
 import { HStack, Image } from "@chakra-ui/react";
-import basketballBall from "../assets/balls/basketball-ball.png";
-import tennisBall from "../assets/balls/tennis-ball.png";
+import logo from "../assets/logo.webp";
 import { ColorModeSwitch } from "./ColorModeSwitch";
+import { SearchInput } from "./SearchInput";
 
 export const NavBar = () => {
   return (
     <div>
-      <HStack justifyContent="space-between" padding="10px">
-        <Image src={basketballBall} boxSize="40px" />
-        <Image src={tennisBall} boxSize="40px" />
+      <HStack padding="10px">
+        <Image src={logo} boxSize="40px" />
+        <SearchInput />
         <ColorModeSwitch />
       </HStack>
     </div>
