@@ -1,12 +1,4 @@
-import {
-  HStack,
-  Image,
-  List,
-  ListItem,
-  Spinner,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { HStack, Image, List, ListItem, Spinner, Text } from "@chakra-ui/react";
 import { useGenres } from "../hooks/useGenres";
 import getCroppedImageURL from "../services/image-url";
 
