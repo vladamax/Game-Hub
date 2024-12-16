@@ -1,6 +1,5 @@
-import { Genre } from "../components/GenreList";
-import useData from "./useData";
+import genres from "../data/genres";
 
 export const useGenres = () => {
-  return useData<Genre>("/genres");
+  return { data: genres, isLoading: false, error: null };
 };
