@@ -43,9 +43,11 @@ export const GameGrid = ({ gameQuery }: Props) => {
           </React.Fragment>
         ))}
       </SimpleGrid>
-      <Button onClick={() => fetchNextPage()} marginY={5}>
-        {isFetchingNextPage ? "Loading..." : "Load More"}
-      </Button>
+      {hasNextPage && (
+        <Button onClick={() => fetchNextPage()} marginY={5}>
+          {isFetchingNextPage ? "Loading..." : "Load More"}
+        </Button>
+      )}
     </Box>
   );
 };
