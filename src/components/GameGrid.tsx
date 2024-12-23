@@ -4,12 +4,7 @@ import { useGames } from "../hooks/useGames";
 import { GameCard } from "./GameCard";
 import { GameCardContainer } from "./GameCardContainer";
 import { GameCardSkeleton } from "./GameCardSkeleton";
-
-export interface Platform {
-  id: number;
-  name: string;
-  slug: string;
-}
+import { Platform } from "../hooks/usePlatforms";
 
 export interface Game {
   id: number;
@@ -29,7 +24,7 @@ export const GameGrid = ({ gameQuery }: Props) => {
 
   const skeletons = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-  if (error) return <Text>{error}</Text>;
+  if (error) return <Text>{error.message}</Text>;
 
   return (
     <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} spacing={6}>
@@ -39,7 +34,7 @@ export const GameGrid = ({ gameQuery }: Props) => {
             <GameCardSkeleton />
           </GameCardContainer>
         ))}
-      {data.map((game) => (
+      {data?.results.map((game) => (
         <GameCardContainer key={game.id}>
           <GameCard game={game}></GameCard>
         </GameCardContainer>
