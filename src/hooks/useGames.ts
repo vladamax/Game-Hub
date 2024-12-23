@@ -17,9 +17,8 @@ export const useGames = (gameQuery: GameQuery) => {
         },
       }),
     getNextPageParam: (lastPage, allPages) => {
-      console.log("allPages: ", allPages);
-      console.log("lastPage: ", lastPage);
       return lastPage.next ? allPages.length + 1 : undefined;
     },
+    staleTime: 24 * 60 * 60 * 1000, //24h
   });
 };
