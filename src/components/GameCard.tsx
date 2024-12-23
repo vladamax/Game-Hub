@@ -1,9 +1,9 @@
 import { Card, CardBody, Heading, HStack, Image } from "@chakra-ui/react";
 import getCroppedImageURL from "../services/image-url";
 import { CriticScore } from "./CriticScore";
-import { Game } from "./GameGrid";
 import { PlatformIconList } from "./PlatformIconList";
 import { Emoji } from "./Emoji";
+import { Game } from "../services/gamesService";
 
 interface Props {
   game: Game;

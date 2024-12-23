@@ -4,16 +4,6 @@ import { useGames } from "../hooks/useGames";
 import { GameCard } from "./GameCard";
 import { GameCardContainer } from "./GameCardContainer";
 import { GameCardSkeleton } from "./GameCardSkeleton";
-import { Platform } from "../hooks/usePlatforms";
-
-export interface Game {
-  id: number;
-  name: string;
-  background_image: string;
-  parent_platforms: { platform: Platform }[];
-  metacritic: number;
-  rating_top: number;
-}
 
 interface Props {
   gameQuery: GameQuery;
